@@ -68,6 +68,7 @@ do
 done < "$input"
 
 ##daqui pra baixo ainda eh trabalho em progresso. juntar os validos e invalidos no resultado.txt - carvalho
+## aparentemente tem um bug em que alguns endereços sao repetidos e imprimidos duas vezes. importante checar - carvalho
 
 valido=valido.txt
 invalido=invalido.txt

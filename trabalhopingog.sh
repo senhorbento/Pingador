@@ -64,14 +64,14 @@ do
 	fi
 done < "$valido"
 
-cat resultado.txt 
-exit 0
+#cat resultado.txt 
+#exit 0
 
 cat valido.txt > resultado.txt
 echo " " >> resultado.txt
 cat invalido.txt >> resultado.txt
 cat resultado.txt
-exit 0
+#exit 0
 
 
 echo Fim de arquivo.

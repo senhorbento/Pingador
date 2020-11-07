@@ -8,9 +8,9 @@ clear
 
 if [ 6 -lt $hora ] && [ $hora -lt 12 ] ; then
 	echo Bom dia, $USER. Quer um cafe?
-else if [ 12 -lt $hora ] && [ $hora -lt 19 ] ; then
+else if [ 12 -lt $hora ] && [ $hora -lt 18 ] ; then
 	echo Boa tarde, $USER.
-else if [ 19 -lt $hora ] && [ $hora -lt 23 ] ; then
+else if [ 18 -lt $hora ] && [ $hora -lt 23 ] ; then
 	echo Boa noite, $USER.
 fi ; fi ; fi
 
@@ -19,7 +19,7 @@ if [ $# -eq 0 ] ; then
 	input=0
 	while [ ! -f $input ]
 		do
-		echo Insira o caminho do arquivo:
+		echo Insira o caminho correspondente ao arquivo:
 		read input
 		if [ ! -f $input ] ; then
 			clear

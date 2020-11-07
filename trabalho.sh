@@ -59,8 +59,9 @@ do
 		fi
 		ping -c 4 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" >> valido.txt
 		(( contv++ ))
-		echo "$contv"
-	else 
+		#echo "$contv"
+		echo -n "*"
+        else 
 		if [ $conti -eq 0 ] ; then 
 		echo "$line" > invalido.txt
 		fi
@@ -76,6 +77,7 @@ done < "$input"
 valido=valido.txt
 invalido=invalido.txt
 
+echo ' ' 
 echo ENDERECOS ATIVOS > resultado.txt
 
 while IFS= read -r line

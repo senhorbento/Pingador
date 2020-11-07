@@ -16,26 +16,26 @@ clear
 ## cumprimento com o usuario, opcional e apenas uma frescura que eu inventei - carvalho
 
 if [ 6 -lt $hora ] && [ $hora -lt 12 ] ; then
-	echo Bom dia, $USER. Quer um cafe?
+	echo "Bom dia, $USER. Aceita um cafe?"
 else if [ 12 -lt $hora ] && [ $hora -lt 18 ] ; then
-	echo Boa tarde, $USER.
+	echo "Boa tarde, $USER. Aceita um suco?"
 else if [ 18 -lt $hora ] && [ $hora -lt 23 ] ; then
-	echo Boa noite, $USER.
+	echo "Boa noite, $USER. Hora da breja."
 fi ; fi ; fi
 
 if [ $# -eq 0 ] || [ ! -f $1 ]; then 
 ## se nenhum parametro foi passado
-	echo Nenhum caminho foi informado.
+	echo "Nenhum caminho foi informado."
 	input=0
 	while [ ! -f $input ]
 	do
 	## enquanto input nao for um arquivo valido
-		echo Insira o caminho correspondente ao arquivo:
-		echo "obs:Caso ja esteja no diretorio, por favor informar o nome do arquivo."
+		echo "Insira o caminho do arquivo."
+		echo "Obs: Caso esteja no diretorio, por favor informar somente o nome do arquivo."
 		read input
 		if [ ! -f $input ] ; then
 			clear
-			echo Caminho invalido.
+			echo "Caminho invalido."
 		fi
 	done
 else if [ -f $1 ] ; then
@@ -103,7 +103,7 @@ done < "$invalido"
 
 cat resultado.txt
 
-echo Fim de arquivo.
+echo Fim de arquivo
 echo "deseja inserir um novo arquivo[s/n]?"
 read resp
 test "$resp" = "n" && exit

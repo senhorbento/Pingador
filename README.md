@@ -8,10 +8,10 @@ deve ser apresentada ao utilizador e outro arquivo deve ser pedido no máximo 3 
 terminar o programa.
 Antes de realizar o ping o script deve verificar se a linha do arquivo que ira testar tem o formato
 de um endereço ipv4. (Dica Usar Regex)
----o comando utilizado para testar o ipv4 é: ping -c 1 endereço_ipv4.
----sempre que o comando retorna dentro da String de resposta o texto '100% packt loss' podem
+- o comando utilizado para testar o ipv4 é: ping -c 1 endereço_ipv4.
+- sempre que o comando retorna dentro da String de resposta o texto '100% packt loss' podem
 considerar que o teste falhou.
----o script deve criar um arquivo designado Resultados_teste.txt contendo a seguinte informação
-a. quantidade e lista de endereços ativos
-b.quantidade e lista de endereços inativos
-c.quantidade e lista de endereços inválidos
+- o script deve criar um arquivo designado Resultados_teste.txt contendo a seguinte informação
+- A) quantidade e lista de endereços ativos
+- B) quantidade e lista de endereços inativos
+- C) quantidade e lista de endereços inválidos

@@ -1,6 +1,8 @@
 
 #! /bin/bash
 
+while true
+do
 #contador de ips validos
 contv=0 
 #contador de dados invalidos
@@ -29,6 +31,7 @@ if [ $# -eq 0 ] || [ ! -f $1 ]; then
 	do
 	## enquanto input nao for um arquivo valido
 		echo Insira o caminho correspondente ao arquivo:
+		echo "obs:Caso ja esteja no diretorio, por favor informar o nome do arquivo."
 		read input
 		if [ ! -f $input ] ; then
 			clear
@@ -101,3 +104,11 @@ done < "$invalido"
 cat resultado.txt
 
 echo Fim de arquivo.
+echo "deseja inserir um novo arquivo[s/n]?"
+read resp
+test "$resp" = "n" && exit
+sleep 1
+clear
+done
+
+

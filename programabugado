@@ -15,22 +15,22 @@ clear
 ## cumprimento com o usuario, opcional e apenas uma frescura que eu inventei - carvalho
 
 if [ 6 -lt $hora ] && [ $hora -lt 12 ] ; then
-	echo "Bom dia, me chamo Sir_i e seu nome eh $USER, certo? Aceita um cafe?"
+	echo "Bom dia, me chamo Sir_i e seu nome eh $USER, certo? Eu fui criado para ser um script que testa ips e pings. Aceita um cafe?"
 else if [ 12 -lt $hora ] && [ $hora -lt 18 ] ; then
-	echo "Boa tarde, me chamo Sir_i e seu nome eh $USER, certo? Aceita um suco?"
+	echo "Boa tarde, me chamo Sir_i e seu nome eh $USER, certo? Eu fui criado para ser um script que testa ips e pings. Aceita um suco?"
 else if [ 18 -lt $hora ] && [ $hora -lt 23 ] ; then
-	echo "Boa noite, me chamo Sir_i e seu nome eh $USER, certo? Hora da breja!"
+	echo "Boa noite, me chamo Sir_i e seu nome eh $USER, certo? Eu fui criado para ser um script que testa ips e pings. Hora da breja!"
 fi ; fi ; fi
 
 if [ $# -eq 0 ] || [ ! -f $1 ]; then 
 ## se nenhum parametro foi passado
-	echo "Nenhum caminho foi informado."
+	echo "Voce não informou nenhum caminho foi informado."
 	input=0
 	while [ ! -f $input ]
 	do
 	## enquanto input nao for um arquivo valido
-		echo "Insira o caminho do arquivo."
-		echo "Obs: Caso esteja no diretorio, por favor informar somente o nome do arquivo."
+		echo "Por favor insira o caminho do arquivo."
+		echo "Nao se esqueca, caso o arquivo esteja no diretorio, por favor informar somente o nome do arquivo."
 		read input
 		if [ ! -f $input ] ; then
 			clear
@@ -51,7 +51,7 @@ do
 
 	if [[ $line =~ $ipvalido ]] ; then
 		if [ $contv -eq 0 ] ; then
-			echo Testando os enderecos... aguarde.
+			echo Estou testando os enderecos... aguarde.
 			echo -n "$line - " > valido.txt
 		else 
 			echo -n "$line - " >> valido.txt
@@ -104,7 +104,7 @@ done < "$invalido"
 
 while test "$resp" != "n" || test "$resp" != "N" || test "$resp" != "S" || test "$resp" != "s"
 	do
-		echo "Deseja inserir um novo arquivo[s/n]?"
+		echo "Voce deseja inserir um novo arquivo[s/n]?"
 		read resp
 		test "$resp" = "n" || test "$resp" = "N" && echo "Obrigado por usar o Sir_I" && exit
 		test "$resp" != "n" || test "$resp" != "N" || test "$resp" != "S" || test "$resp" != "s" && echo "Termo incorreto favor digitar novamente"

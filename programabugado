@@ -15,11 +15,11 @@ clear
 ## cumprimento com o usuario, opcional e apenas uma frescura que eu inventei - carvalho
 
 if [ 6 -lt $hora ] && [ $hora -lt 12 ] ; then
-	echo "Bom dia, $USER. Aceita um cafe?"
+	echo "Bom dia, me chamo Sir_i e seu nome eh $USER, certo? Aceita um cafe?"
 else if [ 12 -lt $hora ] && [ $hora -lt 18 ] ; then
-	echo "Boa tarde, $USER. Aceita um suco?"
+	echo "Boa tarde, me chamo Sir_i e seu nome eh $USER, certo? Aceita um suco?"
 else if [ 18 -lt $hora ] && [ $hora -lt 23 ] ; then
-	echo "Boa noite, $USER. Hora da breja!"
+	echo "Boa noite, me chamo Sir_i e seu nome eh $USER, certo? Hora da breja!"
 fi ; fi ; fi
 
 if [ $# -eq 0 ] || [ ! -f $1 ]; then 

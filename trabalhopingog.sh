@@ -1,10 +1,12 @@
 
 #! /bin/bash
 
-contv=0
-conti=0
+contv=0 ##contador de ips validos
+conti=0 ##contador de dados invalidos
 hora=$(date +%H)
 clear
+
+## cumprimento com o usuario, opcional e apenas uma frescura que eu inventei - carvalho
 
 if [ 6 -lt $hora ] && [ $hora -lt 12 ] ; then
 	echo Bom dia, $USER. Quer um cafe?
@@ -14,10 +16,12 @@ else if [ 18 -lt $hora ] && [ $hora -lt 23 ] ; then
 	echo Boa noite, $USER.
 fi ; fi ; fi
 
-if [ $# -eq 0 ] ; then
+##
+
+if [ $# -eq 0 ] ; then ## se nenhum parametro foi passado
 	echo Nenhum caminho foi informado.
 	input=0
-	while [ ! -f $input ]
+	while [ ! -f $input ] ## enquanto input nao for um arquivo valido
 		do
 		echo Insira o caminho correspondente ao arquivo:
 		read input
@@ -26,17 +30,18 @@ if [ $# -eq 0 ] ; then
 			echo Caminho invalido.
 		fi
 	done
-else
+else ## se foi, input = parametro
 	input=$1
 fi
 
-touch ping.txt
+touch ping.txt 
+## criaçao de arquivos, talvez tentar juntar em apenas um? - carvalho
 touch valido.txt ; echo VALIDOS > valido.txt
 touch invalido.txt ; echo INVALIDOS > invalido.txt
 
 while read line
 do
-	
+	## se for um ip valido
 	if [[ $line =~ ^([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$ ]] ; then
 		if [ $contv -eq 0 ] ; then
 			echo Testando os enderecos... aguarde.
@@ -52,6 +57,8 @@ do
 	fi
 
 done < "$input"
+
+##daqui pra baixo ainda eh trabalho em progresso. juntar os validos e invalidos no resultado.txt - carvalho
 
 valido=/home/carvalho/Documentos/lft/Trabalho/valido.txt
 

@@ -24,7 +24,7 @@ fi ; fi ; fi
 
 if [ $# -eq 0 ] || [ ! -f $1 ]; then 
 ## se nenhum parametro foi passado
-	echo "Voce não informou nenhum caminho foi informado."
+	echo "Voce não informou nenhum caminho."
 	input=0
 	while [ ! -f $input ]
 	do

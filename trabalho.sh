@@ -84,7 +84,908 @@ do
 		ping -c 4 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" >> valido.txt
 		(( contv++ ))
 		#echo "$contv"
-		echo -en "\033[00;32m*\033[0m"
+		est=$((RANDOM%8))
+		lst=$((RANDOM%7))
+		fut=$((RANDOM%8))
+
+		if [ $est -eq 0 ] ; then
+			if [ $lst -eq 0 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[00;31;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[00;31;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[00;31;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[00;31;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[00;31;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[00;31;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[00;31;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[00;31;47m*\033[0m"
+                fi
+			elif [ $lst -eq 1 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[00;32;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[00;32;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[00;32;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[00;32;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[00;32;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[00;32;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[00;32;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[00;32;47m*\033[0m"
+                fi
+			elif [ $lst -eq 2 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[00;33;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[00;33;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[00;33;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[00;33;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[00;33;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[00;33;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[00;33;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[00;33;47m*\033[0m"
+                fi
+			elif [ $lst -eq 3 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[00;34;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[00;34;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[00;34;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[00;34;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[00;34;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[00;34;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[00;34;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[00;34;47m*\033[0m"
+                fi
+			elif [ $lst -eq 4 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[00;35;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[00;35;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[00;35;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[00;35;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[00;35;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[00;35;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[00;35;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[00;35;47m*\033[0m"
+                fi
+			elif [ $lst -eq 5 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[00;36;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[00;36;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[00;36;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[00;36;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[00;36;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[00;36;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[00;36;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[00;36;47m*\033[0m"
+                fi
+			elif [ $lst -eq 6 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[00;37;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[00;37;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[00;37;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[00;37;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[00;37;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[00;37;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[00;37;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[00;37;47m*\033[0m"
+                fi
+            fi
+		elif [ $est -eq 1 ] ; then
+			if [ $lst -eq 0 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[01;31;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[01;31;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[01;31;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[01;31;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[01;31;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[01;31;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[01;31;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[01;31;47m*\033[0m"
+                fi
+			elif [ $lst -eq 1 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[01;32;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[01;32;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[01;32;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[01;32;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[01;32;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[01;32;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[01;32;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[01;32;47m*\033[0m"
+                fi
+			elif [ $lst -eq 2 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[01;33;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[01;33;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[01;33;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[01;33;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[01;33;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[01;33;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[01;33;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[01;33;47m*\033[0m"
+                fi
+			elif [ $lst -eq 3 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[01;34;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[01;34;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[01;34;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[01;34;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[01;34;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[01;34;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[01;34;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[01;34;47m*\033[0m"
+                fi
+			elif [ $lst -eq 4 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[01;35;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[01;35;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[01;35;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[01;35;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[01;35;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[01;35;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[01;35;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[01;35;47m*\033[0m"
+                fi
+			elif [ $lst -eq 5 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[01;36;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[01;36;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[01;36;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[01;36;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[01;36;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[01;36;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[01;36;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[01;36;47m*\033[0m"
+                fi
+			elif [ $lst -eq 6 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[01;37;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[01;37;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[01;37;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[01;37;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[01;37;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[01;37;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[01;37;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[01;37;47m*\033[0m"
+                fi
+            fi
+		elif [ $est -eq 2 ] ; then
+			if [ $lst -eq 0 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[02;31;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[02;31;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[02;31;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[02;31;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[02;31;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[02;31;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[02;31;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[02;31;47m*\033[0m"
+                fi
+			elif [ $lst -eq 1 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[02;32;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[02;32;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[02;32;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[02;32;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[02;32;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[02;32;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[02;32;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[02;32;47m*\033[0m"
+                fi
+			elif [ $lst -eq 2 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[02;33;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[02;33;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[02;33;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[02;33;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[02;33;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[02;33;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[02;33;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[02;33;47m*\033[0m"
+                fi
+			elif [ $lst -eq 3 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[02;34;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[02;34;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[02;34;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[02;34;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[02;34;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[02;34;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[02;34;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[02;34;47m*\033[0m"
+                fi
+			elif [ $lst -eq 4 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[02;35;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[02;35;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[02;35;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[02;35;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[02;35;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[02;35;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[02;35;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[02;35;47m*\033[0m"
+                fi
+			elif [ $lst -eq 5 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[02;36;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[02;36;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[02;36;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[02;36;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[02;36;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[02;36;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[02;36;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[02;36;47m*\033[0m"
+                fi
+			elif [ $lst -eq 6 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[02;37;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[02;37;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[02;37;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[02;37;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[02;37;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[02;37;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[02;37;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[02;37;47m*\033[0m"
+                fi
+            fi
+		elif [ $est -eq 3 ] ; then
+			if [ $lst -eq 0 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[03;31;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[03;31;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[03;31;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[03;31;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[03;31;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[03;31;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[03;31;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[03;31;47m*\033[0m"
+                fi
+			elif [ $lst -eq 1 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[03;32;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[03;32;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[03;32;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[03;32;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[03;32;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[03;32;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[03;32;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[03;32;47m*\033[0m"
+                fi
+			elif [ $lst -eq 2 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[03;33;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[03;33;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[03;33;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[03;33;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[03;33;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[03;33;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[03;33;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[03;33;47m*\033[0m"
+                fi
+			elif [ $lst -eq 3 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[03;34;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[03;34;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[03;34;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[03;34;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[03;34;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[03;34;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[03;34;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[03;34;47m*\033[0m"
+                fi
+			elif [ $lst -eq 4 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[03;35;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[03;35;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[03;35;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[03;35;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[03;35;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[03;35;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[03;35;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[03;35;47m*\033[0m"
+                fi
+			elif [ $lst -eq 5 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[03;36;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[03;36;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[03;36;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[03;36;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[03;36;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[03;36;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[03;36;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[03;36;47m*\033[0m"
+                fi
+			elif [ $lst -eq 6 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[03;37;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[03;37;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[03;37;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[03;37;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[03;37;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[03;37;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[03;37;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[03;37;47m*\033[0m"
+                fi
+            fi
+		elif [ $est -eq 4 ] ; then
+			if [ $lst -eq 0 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[04;31;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[04;31;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[04;31;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[04;31;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[04;31;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[04;31;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[04;31;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[04;31;47m*\033[0m"
+                fi
+			elif [ $lst -eq 1 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[04;32;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[04;32;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[04;32;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[04;32;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[04;32;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[04;32;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[04;32;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[04;32;47m*\033[0m"
+                fi
+			elif [ $lst -eq 2 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[04;33;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[04;33;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[04;33;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[04;33;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[04;33;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[04;33;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[04;33;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[04;33;47m*\033[0m"
+                fi
+			elif [ $lst -eq 3 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[04;34;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[04;34;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[04;34;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[04;34;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[04;34;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[04;34;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[04;34;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[04;34;47m*\033[0m"
+                fi
+			elif [ $lst -eq 4 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[04;35;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[04;35;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[04;35;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[04;35;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[04;35;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[04;35;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[04;35;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[04;35;47m*\033[0m"
+                fi
+			elif [ $lst -eq 5 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[04;36;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[04;36;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[04;36;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[04;36;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[04;36;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[04;36;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[04;36;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[04;36;47m*\033[0m"
+                fi
+			elif [ $lst -eq 6 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[04;37;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[04;37;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[04;37;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[04;37;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[04;37;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[04;37;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[04;37;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[04;37;47m*\033[0m"
+                fi
+            fi
+		elif [ $est -eq 5 ] ; then
+			if [ $lst -eq 0 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[05;31;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[05;31;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[05;31;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[05;31;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[05;31;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[05;31;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[05;31;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[05;31;47m*\033[0m"
+                fi
+			elif [ $lst -eq 1 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[05;32;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[05;32;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[05;32;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[05;32;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[05;32;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[05;32;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[05;32;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[05;32;47m*\033[0m"
+                fi
+			elif [ $lst -eq 2 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[05;33;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[05;33;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[05;33;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[05;33;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[05;33;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[05;33;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[05;33;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[05;33;47m*\033[0m"
+                fi
+			elif [ $lst -eq 3 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[05;34;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[05;34;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[05;34;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[05;34;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[05;34;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[05;34;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[05;34;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[05;34;47m*\033[0m"
+                fi
+			elif [ $lst -eq 4 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[05;35;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[05;35;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[05;35;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[05;35;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[05;35;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[05;35;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[05;35;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[05;35;47m*\033[0m"
+                fi
+			elif [ $lst -eq 5 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[05;36;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[05;36;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[05;36;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[05;36;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[05;36;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[05;36;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[05;36;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[05;36;47m*\033[0m"
+                fi
+			elif [ $lst -eq 6 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[05;37;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[05;37;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[05;37;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[05;37;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[05;37;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[05;37;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[05;37;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[05;37;47m*\033[0m"
+                fi
+            fi
+		elif [ $est -eq 6 ] ; then
+			if [ $lst -eq 0 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[06;31;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[06;31;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[06;31;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[06;31;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[06;31;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[06;31;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[06;31;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[06;31;47m*\033[0m"
+                fi
+			elif [ $lst -eq 1 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[06;32;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[06;32;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[06;32;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[06;32;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[06;32;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[06;32;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[06;32;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[06;32;47m*\033[0m"
+                fi
+			elif [ $lst -eq 2 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[06;33;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[06;33;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[06;33;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[06;33;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[06;33;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[06;33;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[06;33;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[06;33;47m*\033[0m"
+                fi
+			elif [ $lst -eq 3 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[06;34;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[06;34;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[06;34;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[06;34;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[06;34;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[06;34;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[06;34;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[06;34;47m*\033[0m"
+                fi
+			elif [ $lst -eq 4 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[06;35;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[06;35;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[06;35;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[06;35;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[06;35;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[06;35;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[06;35;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[06;35;47m*\033[0m"
+                fi
+			elif [ $lst -eq 5 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[06;36;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[06;36;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[06;36;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[06;36;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[06;36;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[06;36;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[06;36;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[06;36;47m*\033[0m"
+                fi
+			elif [ $lst -eq 6 ] ; then
+				if [ $fut -eq 0 ] ; then
+				echo -en "\033[06;37;40m*\033[0m"
+				elif [ $fut -eq 1 ] ; then
+				echo -en "\033[06;37;41m*\033[0m"
+				elif [ $fut -eq 2 ] ; then
+				echo -en "\033[06;37;42m*\033[0m"
+				elif [ $fut -eq 3 ] ; then
+				echo -en "\033[06;37;43m*\033[0m"
+				elif [ $fut -eq 4 ] ; then
+				echo -en "\033[06;37;44m*\033[0m"
+				elif [ $fut -eq 5 ] ; then
+				echo -en "\033[06;37;45m*\033[0m"
+				elif [ $fut -eq 6 ] ; then
+				echo -en "\033[06;37;46m*\033[0m"
+				elif [ $fut -eq 7 ] ; then
+				echo -en "\033[06;37;47m*\033[0m"
+                fi
+            fi
+		fi
+echo"]"
 		#progress_bar 10
         else 
 		if [ $conti -eq 0 ] ; then 

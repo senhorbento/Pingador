@@ -55,11 +55,11 @@ touch invalido.txt ; #echo INVALIDOS > invalido.txt
 
 while IFS= read -r line
 do
-
 	if [[ $line =~ $ipvalido ]] ; then
 		if [ $contv -eq 0 ] ; then
             echo -en "\033[01mTestando os enderecos... aguarde.\033[0m"
             echo
+            echo -en "\033[33m[\033[0m"
 			echo -n "$line - " > valido.txt
 		else 
 			echo -n "$line - " >> valido.txt
@@ -67,7 +67,7 @@ do
 		ping -c 4 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" >> valido.txt
 		(( contv++ ))
 		#echo "$contv"
-		echo -n "*"
+		echo -en "*"
         else 
 		if [ $conti -eq 0 ] ; then 
 		echo "$line" > invalido.txt
@@ -75,8 +75,8 @@ do
 		echo "$line" >> invalido.txt
 		(( conti++ ))
 	fi
-
 done < "$input"
+echo -en "\033[33m]\033[0m"
 
 ##daqui pra baixo ainda eh trabalho em progresso. juntar os validos e invalidos no resultado.txt - carvalho
 ## aparentemente tem um bug em que alguns endereços sao repetidos e imprimidos duas vezes. importante checar - carvalho

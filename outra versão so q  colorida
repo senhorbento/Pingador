@@ -4,6 +4,14 @@ CONTINUAR=1
 
 while [ $CONTINUAR -eq 1 ]
 do
+
+if [ -f invalido.txt ] ; then 
+	rm invalido.txt 
+fi 
+if [ -f valido.txt ] ; then 
+	rm valido.txt
+fi
+
 cont=3
 #contador de ips validos
 contv=0 
@@ -20,7 +28,7 @@ clear
 
 ## cumprimento com o usuario, opcional e apenas uma frescura que eu inventei - carvalho
 
-echo -en "\033[32mSeja bem vindo ao Sir_Ip, o script analista de enderecos IPV4! \033[0m"
+echo -en "\033[32mSeja bem vindo ao Sir_I, o script analista de enderecos IPV4! \033[0m"
 echo
 
 if [ 6 -lt $hora ] && [ $hora -lt 12 ] ; then

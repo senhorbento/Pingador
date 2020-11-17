@@ -4,7 +4,6 @@ CONTINUAR=1
 
 while [ $CONTINUAR -eq 1 ]
 do
-
     if [ -f invalido.txt ] ; then 
         rm invalido.txt
     fi 
@@ -15,8 +14,8 @@ do
         rm Resultados_teste.txt
     fi
 
-    cont=3 #contador de ips validos
-    contv=0 #contador de dados invalidos
+    cont=3
+    contv=0
     conti=0
     ativos=0
     inativos=0
@@ -38,10 +37,11 @@ do
     else if [ 18 -lt $hora ] && [ $hora -lt 3 ] ; then
         echo -e "\033[32mBoa noite, $USER. Hora da breja.\033[0m"
         echo 
-    fi ; fi ; fi
+    fi 
+    fi
+    fi
 
     if [ $# -eq 0 ] || [ ! -f $1 ]; then 
-
         echo -e "\033[31mVoce nao informou nenhum caminho. \033[0m" 
         echo 
         input=0
@@ -73,13 +73,12 @@ do
             fi
         done
         else if [ -f $1 ] ; then
-            ## se foi, input = parametro
             input=$1
         fi
     fi
 
-    echo > valido.txt ;
-    echo > invalido.txt ;
+    echo > valido.txt
+    echo > invalido.txt
 
     while IFS= read -r line
     do
@@ -104,14 +103,13 @@ do
             (( conti++ ))
         fi
     done < "$input"
-    echo -en "\033[33m]\033[0m"
 
+    echo -en "\033[33m]\033[0m"
     valido=valido.txt
     invalido=invalido.txt
-
-    echo ' ' 
-    echo -en "\033[04m---------------------------------------------\033[0m"
-    echo ' '
+    echo
+    echo -e "\033[04m---------------------------------------------\033[0m"
+    echo
     echo -e "\tENDERECOS ATIVOS" > Resultados_teste.txt
 
     while IFS= read -r line
@@ -146,12 +144,14 @@ do
 
     echo -e "\tTOTAL:" "$invalidos" "ENDERECOS INVALIDOS" >> Resultados_teste.txt
     cat Resultados_teste.txt
+
     if [ -f invalido.txt ] ; then 
         rm invalido.txt
     fi 
     if [ -f valido.txt ] ; then 
         rm valido.txt
     fi
+
     echo
     echo -e "\033[32mUfa! Finalizei o arquivo.\033[0m"
     echo -e "\033[32mO arquivo Resultados_teste.txt foi criado com sucesso\033[0m"
@@ -181,6 +181,8 @@ do
             clear
             echo -e "\033[01mEstou encerrando os trabalhos...\033[0m"
             echo -e "\033[01mObrigado por utilizar os meus servicos.\033[0m"
+            echo 
+            echo -e "\033[01mPressione uma tecla para finalizar.\033[0m"
             CONTINUAR=0
         ;;
             *)

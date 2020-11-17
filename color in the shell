@@ -1,0 +1,42 @@
+#! /bin/bash
+
+echo -en "Estilos"
+echo
+echo -en "\033[00mnormal \033[0m"
+echo -en "\033[01mNegrito \033[0m"
+echo -en "\033[02mBaixa intensidade \033[0m"
+echo -en "\033[03mItálico \033[0m"
+echo -en "\033[04mSublinhado \033[0m"
+echo -en "\033[05mPiscando \033[0m"
+echo -en "\033[06mPiscando rápido \033[0m"
+echo -en "\033[07;30mInvertido \033[0m"
+echo -en "\033[08mInvisível \033[0m"
+
+echo
+echo -en "Cores do texto"
+echo
+echo -en "\033[30mPreto \033[0m"
+echo -en "\033[31mVermelho \033[0m"
+echo -en "\033[32mVerde \033[0m"
+echo -en "\033[33mAmarelo \033[0m"
+echo -en "\033[34mAzul \033[0m"
+echo -en "\033[35mMagneta \033[0m"
+echo -en "\033[36mCiano \033[0m"
+echo -en "\033[37mBranco \033[0m"
+
+echo
+echo -en "Cores do fundo"
+echo
+echo -en "\033[40mPreto \033[0m"
+echo -en "\033[41mVermelho \033[0m"
+echo -en "\033[42mVerde \033[0m"
+echo -en "\033[43mAmarelo \033[0m"
+echo -en "\033[44mAzul \033[0m"
+echo -en "\033[45mMagneta \033[0m"
+echo -en "\033[46mCiano \033[0m"
+echo -en "\033[47mBranco \033[0m"
+
+echo
+
+echo -en "essa e a ordem \ 033[estilo;cor de texto;cor de fundo m texto \ 033[0m"
+echo

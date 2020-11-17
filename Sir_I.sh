@@ -53,7 +53,7 @@ if [ $# -eq 0 ] || [ ! -f $1 ]; then
 	while [ ! -f $input ]
 	do
 	## enquanto input nao for um arquivo valido
-		echo  -en "\033[32mInsira o caminho do arquivo. \033[0m"
+		echo  -en "\033[32mInsira o caminho/nome do arquivo. \033[0m"
         echo
 		##echo  -en "\033[32mobs:caso esteja no diretorio, por favor informar somente o nome do arquivo. \033[0m" 
         ##echo

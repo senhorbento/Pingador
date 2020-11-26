@@ -24,6 +24,7 @@ do
     ipvalido="^([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$"
     ipativo="(\b([0-9]{2}|[0-9]{1}|[^100])% packet loss)"
     ipinativo="(100% packet loss)"
+    
     clear
 
     echo -e "\033[32mMe chamo Sir_I, e sou um script analista de enderecos IPV4! \033[0m"
@@ -37,11 +38,13 @@ do
     else if [ 18 -lt $hora ] && [ $hora -lt 3 ] ; then
         echo -e "\033[32mBoa noite, $USER. Hora da breja.\033[0m"
         echo 
-    fi 
-    fi
+            fi 
+        fi
     fi
 
-    if [ $# -eq 0 ] || [ ! -f $1 ]; then 
+    if [ -f $1 ] ; then
+        input=$1
+    else if [ $# -eq 0 ] || [ ! -f $1 ]; then 
         echo -e "\033[31mVoce nao informou nenhum caminho. \033[0m" 
         echo 
         input=0
@@ -72,8 +75,6 @@ do
                 exit 0
             fi
         done
-        else if [ -f $1 ] ; then
-            input=$1
         fi
     fi
 
@@ -82,19 +83,21 @@ do
 
     while IFS= read -r line
     do
+
         if [[ $line =~ $ipvalido ]] ; then
-        if [ $contv -eq 0 ] ; then
-            echo -e
-            echo -en "\033[01mTestando os enderecos, por favor aguarde...\033[0m"
-            echo
-            echo -en "\033[33m[\033[0m"
-            echo -n "$line - " > valido.txt
-        else 
-            echo -n "$line - " >> valido.txt
-        fi
-        ping -c 4 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" >> valido.txt
-        (( contv++ ))
-        echo -en "*"
+            if [ $contv -eq 0 ] ; then
+                echo -e
+                echo -en "\033[01mTestando os enderecos, por favor aguarde...\033[0m"
+                echo
+                echo -en "\033[33m[\033[0m"
+                echo -n "$line - " > valido.txt
+            else 
+                echo -n "$line - " >> valido.txt
+            fi
+            ping -c 4 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" >> valido.txt
+            (( contv++ ))
+            echo -en "*"
+
         else 
             if [ $conti -eq 0 ] ; then 
                 echo "$line" > invalido.txt
@@ -102,6 +105,7 @@ do
             echo "$line" >> invalido.txt
             (( conti++ ))
         fi
+
     done < "$input"
 
     echo -en "\033[33m]\033[0m"
@@ -110,8 +114,8 @@ do
     echo
     echo -e "\033[04m---------------------------------------------\033[0m"
     echo
-    echo -e "\tENDERECOS ATIVOS" > Resultados_teste.txt
 
+    echo -e "\tENDERECOS ATIVOS" > Resultados_teste.txt
     while IFS= read -r line
     do
         if [[ $line =~ $ipativo ]] ; then 
@@ -119,11 +123,11 @@ do
             (( ativos++ ))
         fi
     done < "$valido"
-
     echo -e "\tTOTAL:" "$ativos" "ENDERECOS ATIVOS" >> Resultados_teste.txt
+    
     echo >> Resultados_teste.txt
+    
     echo -e "\tENDERECOS INATIVOS" >> Resultados_teste.txt 
-
     while IFS= read -r line
         do
         if [[ $line =~ $ipinativo ]] ; then 
@@ -131,18 +135,18 @@ do
             (( inativos++ ))
         fi
     done < "$valido"
-
     echo -e "\tTOTAL:" "$inativos" "ENDERECOS INATIVOS" >> Resultados_teste.txt
+    
     echo >> Resultados_teste.txt
+    
     echo -e "\tENDERECOS INVALIDOS" >> Resultados_teste.txt 
-
     while IFS= read -r line
     do
         echo -en "\t" >> Resultados_teste.txt && echo $line >> Resultados_teste.txt
         (( invalidos ++ ))
     done < "$invalido"
-
     echo -e "\tTOTAL:" "$invalidos" "ENDERECOS INVALIDOS" >> Resultados_teste.txt
+    
     cat Resultados_teste.txt
 
     if [ -f invalido.txt ] ; then 
@@ -191,4 +195,5 @@ do
     esac
     read -n1 
     clear 
+
 done

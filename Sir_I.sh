@@ -42,9 +42,7 @@ do
         fi
     fi
 
-    if [ -f $1 ] ; then
-        input=$1
-    else if [ $# -eq 0 ] || [ ! -f $1 ]; then 
+    if [ $# -eq 0 ] || [ ! -f $1 ]; then 
         echo -e "\033[31mVoce nao informou nenhum caminho. \033[0m" 
         echo 
         input=0
@@ -75,6 +73,8 @@ do
                 exit 0
             fi
         done
+        else if [ -f $1 ] ; then
+            input=$1
         fi
     fi
 

@@ -158,7 +158,7 @@ do
 
     echo
     echo -e "\033[32mUfa! Finalizei o arquivo.\033[0m"
-    echo -e "\033[32mO arquivo Resultados_teste.txt foi criado com sucesso\033[0m"
+    echo -e "\033[32mO arquivo Resultados_teste.txt foi criado com sucesso!\033[0m"
     echo 
     echo -e "\033[32mVoce deseja copiar os resultados para um outro arquivo?[s/n] \033[0m"
     read op

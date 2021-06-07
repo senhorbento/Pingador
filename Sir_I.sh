@@ -127,26 +127,6 @@ do
     
     echo >> Resultados_teste.txt
     
-    echo -e "\tENDERECOS INATIVOS" >> Resultados_teste.txt 
-    while IFS= read -r line
-        do
-        if [[ $line =~ $ipinativo ]] ; then 
-            echo -en "\t" >> Resultados_teste.txt && echo $line >> Resultados_teste.txt
-            (( inativos++ ))
-        fi
-    done < "$valido"
-    echo -e "\tTOTAL:" "$inativos" "ENDERECOS INATIVOS" >> Resultados_teste.txt
-    
-    echo >> Resultados_teste.txt
-    
-    echo -e "\tENDERECOS INVALIDOS" >> Resultados_teste.txt 
-    while IFS= read -r line
-    do
-        echo -en "\t" >> Resultados_teste.txt && echo $line >> Resultados_teste.txt
-        (( invalidos ++ ))
-    done < "$invalido"
-    echo -e "\tTOTAL:" "$invalidos" "ENDERECOS INVALIDOS" >> Resultados_teste.txt
-    
     cat Resultados_teste.txt
 
     if [ -f invalido.txt ] ; then 

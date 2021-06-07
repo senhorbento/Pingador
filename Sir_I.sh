@@ -94,7 +94,7 @@ do
             else 
                 echo -n "$line - " >> valido.txt
             fi
-            ping -c 4 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" >> valido.txt
+            ping -c 1 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" >> valido.txt
             (( contv++ ))
             echo -en "*"
 

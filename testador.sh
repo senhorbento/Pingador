@@ -14,12 +14,9 @@ do
         rm Resultados_teste.txt
     fi
 
-    cont=3
     contv=0
     conti=0
     ativos=0
-    inativos=0
-    invalidos=0
     hora=$(date +%H)
     ipvalido="^([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$"
     ipativo="(\b([0-9]{2}|[0-9]{1}|[^100])% packet loss)"
@@ -48,7 +45,6 @@ do
     fi
 
     echo > valido.txt
-    echo > invalido.txt
 
     while IFS= read -r line
     do
@@ -75,7 +71,6 @@ do
     done < "$input"
     
     valido=valido.txt
-    invalido=invalido.txt
     echo
     echo -e "\033[04m---------------------------------------------\033[0m"
     echo
@@ -94,9 +89,6 @@ do
     
     cat Resultados_teste.txt
 
-    if [ -f invalido.txt ] ; then 
-        rm invalido.txt
-    fi 
     if [ -f valido.txt ] ; then 
         rm valido.txt
     fi
@@ -112,7 +104,6 @@ do
             CONTINUAR=1
         ;;
         "n" | "N")
-            clear
             echo -e "\033[01mPressione uma tecla para finalizar.\033[0m"
             CONTINUAR=0
         ;;

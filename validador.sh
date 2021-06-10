@@ -27,50 +27,19 @@ do
     
     clear
 
-    echo -e "\033[32mMe chamo Sir_I, e sou um script analista de enderecos IPV4! \033[0m"
+    echo -e "\033[32mInicializado o script analista de enderecos IPV4! \033[0m"
 
-    if [ 4 -lt $hora ] && [ $hora -lt 12 ] ; then
-        echo -e "\033[32mBom dia, $USER. Aceita um cafe?\033[0m"
-        echo 
-    else if [ 12 -lt $hora ] && [ $hora -lt 18 ] ; then
-        echo -e "\033[32mBoa tarde, $USER. Aceita um suco?\033[0m"
-        echo 
-    else if [ 18 -lt $hora ] && [ $hora -lt 3 ] ; then
-        echo -e "\033[32mBoa noite, $USER. Hora da breja.\033[0m"
-        echo 
-            fi 
-        fi
-    fi
 
     if [ $# -eq 0 ] || [ ! -f $1 ]; then 
-        echo -e "\033[31mVoce nao informou nenhum caminho. \033[0m" 
-        echo 
         input=0
         while [ ! -f $input ]
         do
-            echo  -e "\033[32mObs.:Caso ja esteja no diretorio,\033[0m"
-            echo  -e "\033[32mvoce pode informar somente o nome do arquivo =)\033[0m"
-            echo
-            echo  -e "\033[32mFavor inserir o caminho do arquivo.\033[0m" 
+            echo  -e "\033[32mFavor inserir o caminho/nome do arquivo.\033[0m" 
             read input
             if [ ! -f $input ] ; then
                 clear
-                (( cont-- ))
-                echo -e "\033[31mEste caminho eh invalido. \033[0m"
-                echo -e "\033[31mTentativas restantes: \033[0m""\033[31m$cont\033[0m"
+                echo -e "\033[31mEste caminho eh invalido.\033[0m"
                 echo
-            fi
-            if [ $cont -eq 0 ] ; then
-                clear 
-                echo -e "\033[31mNenhum caminho valido foi inserido.\033[0m"
-                echo
-                echo -e "\033[01mEstou encerrando os trabalhos...\033[0m"
-                echo -e "\033[01mObrigado por utilizar os meus servicos.\033[0m"
-                echo 
-                echo -e "\033[01mPressione uma tecla para finalizar.\033[0m"
-                read -n1
-                clear
-                exit 0
             fi
         done
         else if [ -f $1 ] ; then
@@ -89,15 +58,12 @@ do
                 echo -e
                 echo -en "\033[01mTestando os enderecos, por favor aguarde...\033[0m"
                 echo
-                echo -en "\033[33m[\033[0m"
                 echo -n "$line - " > valido.txt
             else 
                 echo -n "$line - " >> valido.txt
             fi
             ping -s 24 -t 6 -c 1 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" >> valido.txt
             (( contv++ ))
-            echo -en "*"
-
         else 
             if [ $conti -eq 0 ] ; then 
                 echo "$line" > invalido.txt
@@ -107,8 +73,7 @@ do
         fi
 
     done < "$input"
-
-    echo -en "\033[33m]\033[0m"
+    
     valido=valido.txt
     invalido=invalido.txt
     echo
@@ -137,21 +102,6 @@ do
     fi
 
     echo
-    echo -e "\033[32mUfa! Finalizei o arquivo.\033[0m"
-    echo -e "\033[32mO arquivo Resultados_teste.txt foi criado com sucesso!\033[0m"
-    echo 
-    echo -e "\033[32mVoce deseja copiar os resultados para um outro arquivo?[s/n] \033[0m"
-    read op
-
-    case $op in 
-        "s" | "S")
-        echo -en "\033[32mInsira o nome do arquivo a ser exportado.\033[0m"
-        echo 
-        read nome 
-        cat Resultados_teste.txt > $nome.txt
-    esac
-
-    echo
     echo -en "\033[32mDeseja inserir um novo arquivo? [s/n]\033[0m"
     echo 
     read resp
@@ -163,9 +113,6 @@ do
         ;;
         "n" | "N")
             clear
-            echo -e "\033[01mEstou encerrando os trabalhos...\033[0m"
-            echo -e "\033[01mObrigado por utilizar os meus servicos.\033[0m"
-            echo 
             echo -e "\033[01mPressione uma tecla para finalizar.\033[0m"
             CONTINUAR=0
         ;;
@@ -175,5 +122,4 @@ do
     esac
     read -n1 
     clear 
-
 done

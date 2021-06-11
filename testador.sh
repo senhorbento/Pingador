@@ -9,7 +9,7 @@ do
     
     clear
 
-    echo -e "\033[32mInicializado o script testador! \033[0m"
+    echo -e "\033[32mInicializado o script testador!\033[0m"
 
      if [ $# -eq 0 ] || [ ! -f $1 ]; then 
         input=0
@@ -20,9 +20,10 @@ do
             echo
             echo  -e "\033[32mFavor inserir o nome ou caminho do arquivo.\033[0m" 
             read input
+            clear
             if [ ! -f $input ] ; then
                 clear
-                echo -e "\033[31mEste caminho eh invalido. \033[0m"
+                echo -e "\033[31mEste caminho eh invalido.\033[0m"
                 echo
             fi
         done

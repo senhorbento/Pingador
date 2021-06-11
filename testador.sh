@@ -5,7 +5,7 @@ CONTINUAR=1
 while [ $CONTINUAR -eq 1 ]
 do
     ipvalido="^([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$"
-    ipativo="0% packet loss"
+    ipativo="(\b([0-9]{2}|[0-9]{1}|[^100])% packet loss)"
     
     clear
 
@@ -33,22 +33,26 @@ do
 
     echo > valido.txt
     contv=0
+    echo -e
+    echo -en "\033[01mTestando os enderecos, por favor aguarde...\033[0m"
+    echo
+    comp=comp.txt
     while IFS= read -r line
     do
         if [[ $line =~ $ipvalido ]] ; then
             if [ $contv -eq 0 ] ; then
-                echo -e
-                echo -en "\033[01mTestando os enderecos, por favor aguarde...\033[0m"
-                echo
                 echo -n "$line - " > valido.txt
             else 
                 echo -n "$line - " >> valido.txt
             fi
-            ping -s 24 -t 6 -c 1 $line | comp= `egrep "(\b([0-9]{2}|[0-9]{1}|[^100])% packet loss)"`
-        fi
-        echo "$comp"
-        if [[ $comp =~ $ipativo ]] ; then 
-            echo "$line" " - " "$comp"
+            ping -s 24 -t 6 -c 1 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" > comp.txt
+            while IFS= read -r linha
+            do
+                if [[ $linha =~ $ipativo ]] ; then 
+                    echo "$line" " - " "$linha"
+                fi
+            done < "$comp"
+            
         fi
     done < "$input"
 
@@ -59,7 +63,6 @@ do
 
     case $resp in
         "s" | "S")
-            echo > Resultados_teste.txt
             CONTINUAR=1
         ;;
         "n" | "N")

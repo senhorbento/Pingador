@@ -36,6 +36,7 @@ do
     echo -en "\033[01mTestando os enderecos, por favor aguarde...\033[0m"
     echo
     comp=comp.txt
+    ligado=0
     while IFS= read -r line
     do
         if [[ $line =~ $ipvalido ]] ; then
@@ -43,7 +44,8 @@ do
             while IFS= read -r linha
             do
                 if [[ $linha =~ $ipativo ]] ; then 
-                    echo "$line" " - Equipamento ligado!"
+                    (( ligado++ ))
+                    echo "$ligado" "." "$line" " - Equipamento ligado!"
                 fi
             done < "$comp"
             

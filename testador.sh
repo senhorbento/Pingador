@@ -37,12 +37,18 @@ do
             while IFS= read -r linha
             do
                 if [[ $linha =~ $ipativo ]] ; then 
+                    if [[ $ligado -eq 0 ]] ; then
+                        echo
+                        echo "Equipamentos ligados:"
+                        echo
+                    fi
                     (( ligado++ ))
-                    echo "$ligado""." "$line" " - Equipamento ligado!"
+                    echo "$ligado""." "$line"
                 fi
             done < "$comp"
         fi
     done < "$input"
+    rm comp.txt
     echo
     echo -en "\033[32mDeseja inserir um novo arquivo? [s/n]\033[0m"
     echo 

@@ -31,7 +31,6 @@ do
         fi
     fi
 
-    contv=0
     echo -e
     echo -en "\033[01mTestando os enderecos, por favor aguarde...\033[0m"
     echo
@@ -54,7 +53,6 @@ do
     echo -en "\033[32mDeseja inserir um novo arquivo? [s/n]\033[0m"
     echo 
     read resp
-
     case $resp in
         "s" | "S")
             CONTINUAR=1

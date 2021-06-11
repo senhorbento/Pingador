@@ -45,10 +45,9 @@ do
             do
                 if [[ $linha =~ $ipativo ]] ; then 
                     (( ligado++ ))
-                    echo "$ligado" "." "$line" " - Equipamento ligado!"
+                    echo "$ligado""." "$line" " - Equipamento ligado!"
                 fi
             done < "$comp"
-            
         fi
     done < "$input"
 

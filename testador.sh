@@ -31,7 +31,6 @@ do
         fi
     fi
 
-    echo > valido.txt
     contv=0
     echo -e
     echo -en "\033[01mTestando os enderecos, por favor aguarde...\033[0m"
@@ -40,16 +39,11 @@ do
     while IFS= read -r line
     do
         if [[ $line =~ $ipvalido ]] ; then
-            if [ $contv -eq 0 ] ; then
-                echo -n "$line - " > valido.txt
-            else 
-                echo -n "$line - " >> valido.txt
-            fi
-            ping -s 24 -t 6 -c 1 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" > comp.txt
+            ping -s 24 -t 10 -c 1 $line | egrep -wo "([0-9]?[0-9]?[0-9]% packet loss)" > comp.txt
             while IFS= read -r linha
             do
                 if [[ $linha =~ $ipativo ]] ; then 
-                    echo "$line" " - " "$linha"
+                    echo "$line" " - Equipamento ligado!"
                 fi
             done < "$comp"
             

@@ -1,16 +1,11 @@
 #! /bin/bash
-
 CONTINUAR=1
-
 while [ $CONTINUAR -eq 1 ]
 do
     ipvalido="^([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$"
     ipativo="(\b([0-9]{2}|[0-9]{1}|[^100])% packet loss)"
-    
     clear
-
     echo -e "\033[32mInicializado o script testador!\033[0m"
-
      if [ $# -eq 0 ] || [ ! -f $1 ]; then 
         input=0
         while [ ! -f $input ]
@@ -20,7 +15,6 @@ do
             echo
             echo  -e "\033[32mFavor inserir o nome ou caminho do arquivo.\033[0m" 
             read input
-            clear
             if [ ! -f $input ] ; then
                 clear
                 echo -e "\033[31mEste caminho eh invalido.\033[0m"
@@ -31,8 +25,7 @@ do
             input=$1
         fi
     fi
-
-    echo -e
+    clear
     echo -en "\033[01mTestando os enderecos, por favor aguarde...\033[0m"
     echo
     comp=comp.txt
@@ -50,7 +43,6 @@ do
             done < "$comp"
         fi
     done < "$input"
-
     echo
     echo -en "\033[32mDeseja inserir um novo arquivo? [s/n]\033[0m"
     echo 

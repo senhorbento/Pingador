@@ -5,19 +5,19 @@ do
     ipvalido="^([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\.([0-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])){3}$"
     ipativo="(\b([0-9]{2}|[0-9]{1}|[^100])% packet loss)"
     clear
-    echo -e "\033[32mInicializado o script testador!\033[0m"
+    echo -e "Inicializado o script testador!"
      if [ $# -eq 0 ] || [ ! -f $1 ]; then 
         input=0
         while [ ! -f $input ]
         do
-            echo  -e "\033[32mObs.:Caso ja esteja no diretorio do arquivo,\033[0m"
-            echo  -e "\033[32mvoce pode informar somente o nome do arquivo =)\033[0m"
+            echo  -e "Obs.:Caso ja esteja no diretorio do arquivo,"
+            echo  -e "voce pode informar somente o nome do arquivo =)"
             echo
-            echo  -e "\033[32mFavor inserir o nome ou caminho do arquivo.\033[0m" 
+            echo  -e "Favor inserir o nome ou caminho do arquivo." 
             read input
             if [ ! -f $input ] ; then
                 clear
-                echo -e "\033[31mEste caminho eh invalido.\033[0m"
+                echo -e "Este caminho eh invalido."
                 echo
             fi
         done
@@ -26,7 +26,7 @@ do
         fi
     fi
     clear
-    echo -en "\033[01mTestando os enderecos, por favor aguarde...\033[0m"
+    echo -en "Testando os enderecos, por favor aguarde..."
     echo
     comp=comp.txt
     ligado=0
@@ -50,15 +50,19 @@ do
     done < "$input"
     rm comp.txt
     echo
-    echo -en "\033[32mDeseja inserir um novo arquivo? [s/n]\033[0m"
-    echo 
+    if [[ $ligado -eq 0 ]] ; then
+        echo
+        echo "Nenhum equipamento foi econtrado ligado!"
+        echo
+    fi
+    echo -en "Deseja inserir um novo arquivo? [s/n] "
     read resp
     case $resp in
         "s" | "S")
             CONTINUAR=1
         ;;
         "n" | "N")
-            echo -e "\033[01mPressione uma tecla para finalizar.\033[0m"
+            echo -e "Pressione uma tecla para finalizar."
             CONTINUAR=0
             read -n1
         ;;

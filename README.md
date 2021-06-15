@@ -1,13 +1,13 @@
 # ip_tester
 
-Um simples Shell script que identifica, dado uma lista de ips, quais dispositivos estão ligados no momentos.
+Um simples Shell script que identifica, dado uma lista de ips, quais dispositivos estão ligados no momento.
 
-O scrip utiliza a ferramenta ping do proprio linux para fazer a validação se o equipamento está ligado.
+O script utiliza a ferramenta ping do próprio linux para fazer a validação se o equipamento está ligado, logo se o equipamento não tiver o ping habilitado constará como desligado.
 Utiliza regex para identificar os ips na lista e dentro do ping se houve ou não packet loss.
 
 ## Modo de utilizar:
 
-Crie uma lista de ips como no exemplo a seguir, e indique ela apos a inicialização do script.
+Crie uma lista de ips como no exemplo a seguir, e indique ela após a inicialização do script.
 
 ### Exemplo de lista:
 

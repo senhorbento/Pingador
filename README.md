@@ -1,4 +1,4 @@
-# testador
+# ip_tester
 
 Um simples scrip em Shell que identifica, dado uma lista de ips, quais dispositivos estão ligados no momentos.
 

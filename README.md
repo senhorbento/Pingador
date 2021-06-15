@@ -10,7 +10,7 @@ Crie uma lista de ips como no exemplo a seguir, e indique ela apos a inicializa√
 
 # Exemplo de lista:
 
-192.168.5.1
-127.0.0.1
-8.8.8.8
-...
+192.168.5.1  
+127.0.0.1  
+8.8.8.8  
+...  

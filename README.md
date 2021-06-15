@@ -3,6 +3,7 @@
 Um simples Shell script que identifica, dado uma lista de ips, quais dispositivos estão ligados no momentos.
 
 O scrip utiliza a ferramenta ping do proprio linux para fazer a validação se o equipamento está ligado.
+Utiliza regex para identificar os ips na lista e dentro do ping se houve ou não packet loss.
 
 ## Modo de utilizar:
 

@@ -4,11 +4,11 @@ Um simples scrip em Shell que identifica, dado uma lista de ips, quais dispositi
 
 O scrip utiliza a ferramenta ping do proprio linux para fazer a validação se o equipamento está ligado.
 
-Modo de utilizar:
+# Modo de utilizar:
 
 Crie uma lista de ips como no exemplo a seguir, e indique ela apos a inicialização do script.
 
-Exemplo de lista:
+# Exemplo de lista:
 
 192.168.5.1
 127.0.0.1

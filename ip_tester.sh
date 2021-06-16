@@ -11,7 +11,7 @@ do
         while [ ! -f $input ]
         do
             echo
-            echo  -e "Obs.:Caso ja esteja no diretorio do arquivo, voce pode informar somente o nome do arquivo =)"
+            echo  -e "Obs.: Caso ja esteja no diretorio do arquivo, voce pode informar somente o nome do arquivo =)"
             echo
             echo  -e "Favor inserir o nome ou caminho do arquivo." 
             read input

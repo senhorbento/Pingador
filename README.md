@@ -11,8 +11,8 @@ Utiliza regex para identificar os ips na lista e dentro do ping se houve ou não
 Crie uma lista de ips como no exemplo a seguir, e indique ela após a inicialização do script.
 
 ### Exemplo de lista:
-
+```
 192.168.5.1  
 127.0.0.1  
 8.8.8.8  
-...  
+``` 
